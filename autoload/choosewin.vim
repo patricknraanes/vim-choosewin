@@ -119,8 +119,9 @@ function! s:cw.choose() "{{{1
     call self.label_clear()
 
     " Regular vim command
-    if index(["H", "J", "K", "L", "O", "Q", "=", "_"], char, 0, 1) >= 0
+    if index(["H", "J", "K", "L", "O", "Q", "=", "_", "V", "S"], char, 0, 1) >= 0
         exe "normal! \<C-W>".char
+        return
     endif
 
     " Tab label is chosen.
